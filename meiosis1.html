@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animation Méiose I - Interactive</title>
+<link rel="stylesheet" href="meiosis1.css">
+</head>
+<body>
+    <h1 class="title">Animation Interactive de la Méiose I</h1>
+
+    <div class="scene">
+        <div class="cell" id="cell">
+            <span class="stage-label" id="stage-label">Prophase I</span>
+            <div class="chromosome" style="--i:0"></div>
+            <div class="chromosome" style="--i:1"></div>
+            <div class="chromosome" style="--i:2"></div>
+            <div class="chromosome" style="--i:3"></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prev">← Étape précédente</button>
+        <button id="next">Étape suivante →</button>
+    </div>
+
+    <script src="meiosis1.js"></script>
+</body>
+</html>

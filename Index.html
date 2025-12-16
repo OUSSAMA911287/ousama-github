@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Projet SVT - Sciences de la Vie et de la Terre</title> 
+        <link rel="stylesheet" href="style.css"> 
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> 
+    </head> 
+    <body> 
+        <header class="hero"> 
+            <div class="container"> 
+                <h1>Méiose </h1> 
+                <div class="box">
+                <p class="bos"><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    La méiose est un processus de <br> division cellulaire en deux<br> étapes qui  produit des gamètes (cellules sexuelles) haploïdes à partir d'une cellule diploïde.</p>
+                <img src="23.png" alt="meiosis"> 
+                </div>    
+            </div> 
+        </header> 
+        <section class="information"> 
+            <div class="container" > 
+                <h2><span class="audio-word" onclick="playAudio('introduction')">Introduction</span>
+                <button id="stop-introduction" class="stop-btn" onclick="stopAudio('introduction')">❚❚</button>    
+                </h2>
+                <audio id="introduction-audio" src="introduction.mp3"></audio
+                <p>La méiose est l'un des processus biologiques les plus délicats et les plus importants sur Terre, le principal moteur de la reproduction sexuée et de la biodiversité.</p>
+                <p>Contrairement à la mitose Qui produit des cellules identiques, la méiose a un double objectif : réduire de moitié le nombre de chromosomes pour assurer la stabilité de l'espèce à travers les générations, et remixer le matériel génétique pour produire une progéniture génétiquement unique. Cet étonnant voyage cellulaire se compose de deux étapes principales et complexes, qui fonctionnent ensemble pour garantir que la vie continue et s'adapte.</p>
+                <br>
+                <a href="meiosis.html" target="_blank" class="btn-animation">Voir l'Animation Meiosis</a>
+            </div> 
+            </section> 
+            <section class="features"> 
+                <div class="container"> 
+                    <h2>Ce qui se passe dans les cellules sexuelles :</h2> 
+                    <div class="grid"> 
+                        <div class="feature"> 
+                            <h3 class="audio-word" onclick="playAudio('etuse')">Étude des chaînes alimentaires</h3> 
+                            <button id="stop-etuse" class="stop-btn" onclick="stopAudio('etuse')">❚❚</button>  
+                            <p>La méiose se produit seulement dans les cellules qui produisent les gamètes (cellules sexuelles), comme les cellules qui donnent les spermatozoïdes et les ovules.</p> 
+                        </div> 
+                        <div class="feature"> 
+                                <h3 class="audio-word" onclick="playAudio('reduction')">Réduction du nombre de chromosomes :</h3>
+                                <button id="stop-reduction" class="stop-btn" onclick="stopAudio('reduction')">❚❚</button> 
+                                <p>Le but principal est de réduire le nombre de chromosomes de moitié (de 2n à n), pour que le nombre de chromosomes reste stable après la fécondation.</p> 
+                            </div> 
+                            <div class="feature"> 
+                                <h3 class="audio-word" onclick="playAudio('production')">Production de la diversité génétique :</h3> 
+                                <button id="stop-production" class="stop-btn" onclick="stopAudio('production')">❚❚</button>
+                                <p>La méiose aide beaucoup à créer la variation génétique chez les descendants, grâce à deux mécanismes principaux : le crossing-over (échange de morceaux de chromosomes) et la répartition aléatoire des chromosomes.</p> 
+                                </div> 
+                                <div class="feature centered">
+                                    <h3 class="audio-word" onclick="playAudio('resultat')">Résultat final : quatre cellules haploïdes</h3>
+                                    <button id="stop-resultat" class="stop-btn" onclick="stopAudio('resultat')">❚❚</button>
+                                    <p>Contrairement à la mitose qui produit deux cellules identiques, la méiose produit finalement quatre cellules filles haploïdes, chacune différente génétiquement de l’autre et de la cellule mère.</p>
+                                </div>
+                                <div class="feature centered video-feature" onclick="openVideo()">
+                                    <h3>Vidéo explicative</h3>
+                                    <p>Cliquez pour voir une vidéo détaillée sur la méiose.</p>
+                                </div>
+                                <div id="videoModal" class="video-modal">
+                                <div class="video-content">
+                                    <span class="close" onclick="closeVideo()">&times;</span>
+                                <video id="meiosisVideo" width="800" controls>
+                                        <source src="prjtt svt.mp4" type="video/mp4">
+                                        Votre navigateur ne supporte pas la vidéo.
+                                </video>
+                                </div>
+                            </div>
+
+                            </div> 
+                        </div> 
+                    </section> 
+                    <footer class="footer"> 
+                        <div class="container"> 
+                            <p>&copy; 2025 Projet SVT - Oussama Akarour - anas ID-ouMOHMeD - MOhamad elkahia</p> 
+                        </div> 
+                    </footer> 
+                    <script src="script.js"></script> 
+                </body> 
+                <audio id="introduction-audio" src="audio/introduction.mp3"></audio>
+</html>

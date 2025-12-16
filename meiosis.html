@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Animation Méiose</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f8ff;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+  }
+
+  .cell {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #ffe4e1;
+    border: 3px solid #ff69b4;
+    position: relative;
+    margin: 20px;
+  }
+
+  .chromosome {
+    width: 10px;
+    height: 50px;
+    background: #8b0000;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    transform-origin: center;
+    transition: all 1s ease;
+  }
+
+  .phase {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="cell">
+  <div class="chromosome" id="chrom1"></div>
+  <div class="chromosome" id="chrom2" style="left: 90px;"></div>
+</div>
+<div class="phase" id="phaseText">Cellule mère</div>
+
+<button onclick="startMeiosis()">Démarrer la Méiose</button>
+
+<script>
+let step = 0;
+
+function startMeiosis() {
+  step++;
+  const chrom1 = document.getElementById('chrom1');
+  const chrom2 = document.getElementById('chrom2');
+  const phaseText = document.getElementById('phaseText');
+
+  if (step === 1) {
+    phaseText.innerText = "Prophase I : Crossing-over";
+    chrom1.style.transform = "rotate(20deg)";
+    chrom2.style.transform = "rotate(-20deg)";
+  } else if (step === 2) {
+    phaseText.innerText = "Métaphase I : Alignement des chromosomes";
+    chrom1.style.left = "50px";
+    chrom2.style.left = "110px";
+    chrom1.style.top = "50px";
+    chrom2.style.top = "50px";
+  } else if (step === 3) {
+    phaseText.innerText = "Anaphase I : Séparation des chromosomes homologues";
+    chrom1.style.top = "0px";
+    chrom2.style.top = "100px";
+  } else if (step === 4) {
+    phaseText.innerText = "Télophase I : Deux cellules filles haploïdes";
+    chrom1.style.top = "50px";
+    chrom2.style.top = "50px";
+    chrom1.style.left = "30px";
+    chrom2.style.left = "110px";
+  } else if (step === 5) {
+    phaseText.innerText = "Méiose II : Séparation des chromatides sœurs";
+    chrom1.style.transform = "rotate(0deg)";
+    chrom2.style.transform = "rotate(0deg)";
+    chrom1.style.top = "10px";
+    chrom2.style.top = "90px";
+  } else {
+    phaseText.innerText = "Fin de la Méiose : 4 cellules haploïdes";
+    alert("Méiose terminée !");
+    step = 0;
+    chrom1.style.left = "70px";
+    chrom2.style.left = "90px";
+    chrom1.style.top = "50px";
+    chrom2.style.top = "50px";
+  }
+}
+</script>
+
+</body>
+</html>
